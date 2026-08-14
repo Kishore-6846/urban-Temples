@@ -2959,9 +2959,13 @@ body:after {
 
 .contact-info {
     position: relative;
-    left: -30px;
-    top: 0;
+    left: 0 !important;
+    top: 0 !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box;
 }
+
 
 @media (max-width: 620px) {
 
@@ -3176,5 +3180,91 @@ body:after {
 
     .form-submit {
         width: 100% !important;
+    }
+}
+
+@media (max-width: 620px) {
+
+    .contact-wrap {
+        width: 100%;
+        padding: 30px 0 40px !important;
+        overflow-x: hidden;
+    }
+
+    .contact-shell {
+        width: 92% !important;
+        max-width: 92% !important;
+        margin: 0 auto !important;
+
+        display: grid !important;
+        grid-template-columns: 1fr !important;
+        gap: 28px !important;
+    }
+
+    .contact-info {
+        position: static !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        padding: 25px 0 5px !important;
+        margin: 0 !important;
+        transform: none !important;
+    }
+
+    .contact-info h1 {
+        font-size: 38px !important;
+        line-height: 1.08 !important;
+        margin: 12px 0 17px !important;
+    }
+
+    .contact-info > p {
+        max-width: 100% !important;
+        font-size: 15px !important;
+        line-height: 1.6 !important;
+    }
+
+    .contact-list {
+        width: 100% !important;
+        gap: 16px !important;
+    }
+
+    .contact-list > div {
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+
+    .contact-form-card {
+        width: 100% !important;
+        max-width: 100% !important;
+
+        position: static !important;
+        left: auto !important;
+        transform: none !important;
+
+        margin: 0 !important;
+
+        padding: 22px !important;
+        box-sizing: border-box !important;
+    }
+
+    .contact-form-card h2 {
+        font-size: 27px !important;
+        line-height: 1.2 !important;
+    }
+
+    .form-grid {
+        grid-template-columns: 1fr !important;
+        gap: 13px !important;
+    }
+
+    .form-grid .full,
+    .form-grid .full-width {
+        grid-column: auto !important;
+    }
+
+    .form-grid input,
+    .form-grid select,
+    .form-grid textarea {
+        width: 100% !important;
+        max-width: 100% !important;
     }
 }
