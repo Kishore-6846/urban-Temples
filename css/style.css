@@ -469,6 +469,11 @@ body:after {
     line-height: 1.4;
 }
 
+.why-promise{
+    text-align: center;
+    margin-top: 60px;
+}
+
 /* ============================================================
    PAGE HERO / COMMON COMPONENTS
    ============================================================ */
@@ -2715,7 +2720,7 @@ body:before, body:after {
     .why-promise {
         text-align: center;
         margin-top: 40px;
-        padding: 24px;
+        padding: 24px;;
         border-top: 1px solid rgba(212,160,23,.45);
     }
 
