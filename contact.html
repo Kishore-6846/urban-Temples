@@ -55,24 +55,24 @@
         <div class="contact-form-card reveal"><span class="eyebrow dark">Send Us Your Requirement</span>
           <h2>Tell us what you are looking for</h2>
           <form id="enquiry-form" novalidate>
-            <div class="form-grid"><label>Your Name<input name="name" type="text" placeholder="Your Name"
-                  required></label><label>Phone Number<input name="phone" type="tel" inputmode="tel"
-                  placeholder="Phone Number" required></label><label>Email Address<input name="email" type="email"
-                  placeholder="Email Address" required></label><label>I am interested in<select name="interest"
-                  id="interest" required>
-                  <option value="">Select a service</option>
-                  <option>Buy a Property</option>
-                  <option>Sell a Property</option>
-                  <option>Build a Home</option>
-                  <option>Design Interiors</option>
-                  <option>Property Consulting</option>
-                  <option>Home Improvements</option>
-                  <option>Smart Home</option>
-                  <option>Home Security</option>
-                  <option>Property Documentation</option>
-                </select></label><label>Preferred Location<input name="location" type="text"
+            <div class="form-grid"><label>Your Name<input type="text" name="name" placeholder="Your Name"
+                  required></label><label>Phone Number<input type="tel" name="phone" placeholder="Phone Number"
+                  required></label><label>Email Address<input type="email" name="email" placeholder="Email Address"
+                  required></label><label>I am interested in<select name="interest" required>
+                  <option value="">I am interested in</option>
+                  <option value="Buy a Property">Buy a Property</option>
+                  <option value="Sell a Property">Sell a Property</option>
+                  <option value="Build a Home">Build a Home</option>
+                  <option value="Design Interiors">Design Interiors</option>
+                  <option value="Property Consulting">Property Consulting</option>
+                  <option value="Home Improvements">Home Improvements</option>
+                  <option value="Smart Home">Smart Home</option>
+                  <option value="Home Security">Home Security</option>
+                  <option value="Property Documentation">Property Documentation</option>
+                </select>
+              </label><label>Preferred Location<input name="location" type="text"
                   placeholder="Preferred Location"></label><label class="full">Tell us about your requirement<textarea
-                  name="message" rows="5" placeholder="Tell us about your requirement" required></textarea></label>
+                  name="message" placeholder="Tell us about your requirement" required></textarea></label>
             </div><button class="btn btn-primary form-submit" type="submit">Submit Enquiry</button>
             <p class="form-note">Static form: your email app will open with the enquiry details. No data is stored on a
               server.</p>

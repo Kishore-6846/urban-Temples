@@ -335,6 +335,196 @@
     </div>
 
   </footer>
+
+
+
+
+
+
+<!--   
+
+  =========================================
+     AUTO ENQUIRY MODAL
+========================================= -->
+
+<div id="enquiryModal" class="enquiry-modal" aria-hidden="true">
+
+    <div class="enquiry-backdrop"></div>
+
+    <div class="enquiry-box" role="dialog" aria-modal="true"
+         aria-labelledby="enquiryTitle">
+
+        CLOSE
+        <button
+            type="button"
+            class="enquiry-close"
+            id="closeEnquiry"
+            aria-label="Close enquiry form">
+            ×
+        </button>
+
+        <div class="enquiry-content">
+
+            <span class="enquiry-eyebrow">
+                VASISHTA URBAN TEMPLES
+            </span>
+
+            <h2 id="enquiryTitle">
+                Enquire Now
+            </h2>
+
+            <p class="enquiry-intro">
+                Please fill in your details and our team will get back to you shortly.
+            </p>
+
+
+            <form 
+            id="homeEnquiryForm"
+            action="https://formspree.io/f/xvkpazqr"
+            method="POST">
+
+                FULL NAME 
+                <div class="enquiry-field">
+                    <label for="enquiryName">
+                        Full Name <span>*</span>
+                    </label>
+
+                    <input
+    type="text"
+    id="enquiryName"
+    name="name"
+    placeholder="e.g. Ramesh Kumar"
+    required>
+                </div>
+
+
+                MOBILE 
+                <div class="enquiry-field">
+                    <label for="enquiryPhone">
+                        Mobile Number <span>*</span>
+                    </label>
+
+                    <input
+    type="tel"
+    id="enquiryPhone"
+    name="phone"
+    placeholder="e.g. 9876543210"
+    required>
+                </div>
+
+
+                EMAIL
+                <div class="enquiry-field">
+                    <label for="enquiryEmail">
+                        Email Address <span>*</span>
+                    </label>
+
+                    <input
+    type="email"
+    id="enquiryEmail"
+    name="email"
+    placeholder="e.g. name@example.com"
+    required>
+                </div>
+
+
+                INTEREST
+                <div class="enquiry-field">
+
+                    <label>
+                        What are you interested in?
+                    </label>
+
+                    <div class="enquiry-options enquiry-options-2">
+
+                        <label class="enquiry-option">
+                            <input
+                                type="radio"
+                                name="interest"
+                                value="Real Estate">
+                            <span>Real Estate</span>
+                        </label>
+
+                        <label class="enquiry-option">
+                            <input
+                                type="radio"
+                                name="interest"
+                                value="Construction">
+                            <span>Construction</span>
+                        </label>
+
+                        <label class="enquiry-option">
+                            <input
+                                type="radio"
+                                name="interest"
+                                value="Interiors">
+                            <span>Interiors</span>
+                        </label>
+
+                        <label class="enquiry-option">
+                            <input
+                                type="radio"
+                                name="interest"
+                                value="Consulting">
+                            <span>Consulting</span>
+                        </label>
+
+                    </div>
+
+                </div>
+
+
+                CONTACT METHOD
+                <div class="enquiry-field">
+
+                    <label>
+                        Preferred Contact Method
+                    </label>
+
+                    <div class="enquiry-options enquiry-options-3">
+
+                        <label class="enquiry-option">
+                            <input
+                                type="radio"
+                                name="contactMethod"
+                                value="Phone">
+                            <span>Phone</span>
+                        </label>
+
+                        <label class="enquiry-option">
+                            <input
+                                type="radio"
+                                name="contactMethod"
+                                value="WhatsApp">
+                            <span>WhatsApp</span>
+                        </label>
+
+                        <label class="enquiry-option">
+                            <input
+                                type="radio"
+                                name="contactMethod"
+                                value="Email">
+                            <span>Email</span>
+                        </label>
+
+                    </div>
+
+                </div>
+
+
+                SUBMIT
+                <button type="submit" class="enquiry-submit">
+                    Send Enquiry
+                </button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+</div> 
+
   <script src="js/script.js"></script>
 </body>
 

@@ -87,3 +87,118 @@
     document.addEventListener('keydown',e=>{if(!box.classList.contains('open'))return;if(e.key==='Escape')close();if(e.key==='ArrowLeft')step(-1);if(e.key==='ArrowRight')step(1)});
   }
 })();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* =========================================
+   AUTO OPEN ENQUIRY MODAL
+========================================= */
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    const enquiryModal = document.getElementById("enquiryModal");
+    const closeEnquiry = document.getElementById("closeEnquiry");
+    const enquiryBackdrop =
+        enquiryModal?.querySelector(".enquiry-backdrop");
+
+    if (!enquiryModal) return;
+
+
+    function openEnquiry() {
+
+        enquiryModal.classList.add("open");
+
+        enquiryModal.setAttribute("aria-hidden", "false");
+
+        document.body.classList.add("enquiry-open");
+
+        setTimeout(() => {
+            document.getElementById("enquiryName")?.focus();
+        }, 150);
+    }
+
+
+    function closeEnquiryModal() {
+
+        enquiryModal.classList.remove("open");
+
+        enquiryModal.setAttribute("aria-hidden", "true");
+
+        document.body.classList.remove("enquiry-open");
+    }
+
+
+    /* OPEN AUTOMATICALLY */
+
+    setTimeout(() => {
+        openEnquiry();
+    }, 500);
+
+
+    /* CLOSE BUTTON */
+
+    closeEnquiry?.addEventListener(
+        "click",
+        closeEnquiryModal
+    );
+
+
+    /* CLICK BACKDROP */
+
+    enquiryBackdrop?.addEventListener(
+        "click",
+        closeEnquiryModal
+    );
+
+
+    /* ESC KEY */
+
+    document.addEventListener("keydown", function (event) {
+
+        if (
+            event.key === "Escape" &&
+            enquiryModal.classList.contains("open")
+        ) {
+            closeEnquiryModal();
+        }
+
+    });
+
+
+    /* FORM */
+
+    const form =
+        document.getElementById("homeEnquiryForm");
+
+    form?.addEventListener("submit", function (event) {
+
+        event.preventDefault();
+
+        // Connect this later to Formspree/Web3Forms.
+        alert("Thank you. Your enquiry has been received.");
+
+        form.reset();
+
+        closeEnquiryModal();
+    });
+
+});
