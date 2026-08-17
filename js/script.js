@@ -38,38 +38,6 @@
     }
 });
 
-  // Contact form validation / mailto fallback
-  const form=document.getElementById('enquiry-form');
-  if(form){
-    const params=new URLSearchParams(location.search);
-    const interest=params.get('interest');
-    const interestEl=form.querySelector('[name="interest"]');
-    if(interest && interestEl){interestEl.value=interest}
-    form.addEventListener('submit',(event)=>{
-      event.preventDefault();
-      const status=form.querySelector('.form-status');
-      const data=new FormData(form);
-      const name=(data.get('name')||'').trim();
-      const phone=(data.get('phone')||'').trim();
-      const email=(data.get('email')||'').trim();
-      const interest=(data.get('interest')||'').trim();
-      const message=(data.get('message')||'').trim();
-      const location=(data.get('location')||'').trim();
-      if(!name || !phone || !email || !interest || !message){status.textContent='Please complete all required fields.';status.style.color='#9c1616';return}
-      const emailOk=/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
-      const phoneOk=/^[+]?[-\s\d()]{10,}$/.test(phone);
-      if(!emailOk){status.textContent='Please enter a valid email address.';status.style.color='#9c1616';return}
-      if(!phoneOk){status.textContent='Please enter a valid phone number.';status.style.color='#9c1616';return}
-      status.textContent='Preparing your enquiry…';status.style.color='#8c6500';
-      const subject=encodeURIComponent(`Website Enquiry — ${interest}`);
-      const bodyTxt=encodeURIComponent(`Name: ${name}\nPhone: ${phone}\nEmail: ${email}\nInterested In: ${interest}\nPreferred Location: ${location||'Not specified'}\n\nRequirement:\n${message}`);
-      window.setTimeout(()=>{
-        window.location.href=`mailto:info@urbantemples.in?subject=${subject}&body=${bodyTxt}`;
-        status.textContent='Your email app is being opened with the enquiry details.';status.style.color='#6b4d00';
-      },450);
-    });
-  }
-
   // Gallery lightbox
   const triggers=[...document.querySelectorAll('.gallery-trigger')];
   const box=document.querySelector('.lightbox');
@@ -181,24 +149,6 @@ document.addEventListener("DOMContentLoaded", function () {
             closeEnquiryModal();
         }
 
-    });
-
-
-    /* FORM */
-
-    const form =
-        document.getElementById("homeEnquiryForm");
-
-    form?.addEventListener("submit", function (event) {
-
-        event.preventDefault();
-
-        // Connect this later to Formspree/Web3Forms.
-        alert("Thank you. Your enquiry has been received.");
-
-        form.reset();
-
-        closeEnquiryModal();
     });
 
 });

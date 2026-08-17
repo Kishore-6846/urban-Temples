@@ -54,7 +54,13 @@
         </div>
         <div class="contact-form-card reveal"><span class="eyebrow dark">Send Us Your Requirement</span>
           <h2>Tell us what you are looking for</h2>
-          <form id="enquiry-form" novalidate>
+          <form
+    id="enquiry-form"
+    action="https://formspree.io/f/xvkpazqr"
+    method="POST"
+    novalidate>
+
+    <input type="hidden" name="form_type" value="Contact Form">
             <div class="form-grid"><label>Your Name<input type="text" name="name" placeholder="Your Name"
                   required></label><label>Phone Number<input type="tel" name="phone" placeholder="Phone Number"
                   required></label><label>Email Address<input type="email" name="email" placeholder="Email Address"
@@ -74,8 +80,7 @@
                   placeholder="Preferred Location"></label><label class="full">Tell us about your requirement<textarea
                   name="message" placeholder="Tell us about your requirement" required></textarea></label>
             </div><button class="btn btn-primary form-submit" type="submit">Submit Enquiry</button>
-            <p class="form-note">Static form: your email app will open with the enquiry details. No data is stored on a
-              server.</p>
+            <p class="form-note">Your enquiry will be securely submitted through our enquiry service.</p>
             <div class="form-status" role="status" aria-live="polite"></div>
           </form>
         </div>
