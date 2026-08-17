@@ -3778,3 +3778,8 @@ body:before, body:after {
     
 }
 
+@media (min-width: 769px) {
+    .page-hero {
+        padding-top: 70px !important;
+    }
+}
