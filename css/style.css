@@ -3791,3 +3791,50 @@ body:before, body:after {
         margin-right: auto !important;
     }
 }
+
+.instagram-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.instagram-icon svg {
+    width: 20px;
+    height: 20px;
+    fill: currentColor;
+}
+
+.footer-contact-icon {
+    width: 22px;
+    height: 22px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    flex: 0 0 22px;
+
+    color: var(--gold-2);
+}
+
+.footer-contact-icon svg {
+    width: 20px;
+    height: 20px;
+    display: block;
+}
+
+.contact-icon {
+    width: 22px;
+    height: 22px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 22px;
+    color: var(--gold-2);
+}
+
+.contact-icon svg {
+    width: 20px;
+    height: 20px;
+    display: block;
+}
