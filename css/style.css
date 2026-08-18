@@ -3838,3 +3838,43 @@ body:before, body:after {
     height: 20px;
     display: block;
 }
+
+@media (min-width: 769px) {
+
+    .footer-bottom {
+        width: 100% !important;
+        display: flex !important;
+        justify-content: space-between !important;
+        align-items: center !important;
+        text-align: left !important;
+
+        padding-left: 130px !important;
+        padding-right: 138px !important;
+        box-sizing: border-box !important;
+    }
+
+    .footer-copyright {
+        text-align: left !important;
+    }
+
+    .footer-developer {
+        text-align: right !important;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .footer-bottom {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        gap: 12px !important;
+        text-align: center !important;
+    }
+
+    .footer-copyright,
+    .footer-developer {
+        display: block !important;
+        margin: 0 !important;
+    }
+}
