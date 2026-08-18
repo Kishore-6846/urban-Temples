@@ -204,7 +204,7 @@ body:after {
 .hero-image {
     position: absolute;
     inset: 0;
-    background: url("../assets/hero/hero-house.jpg") center right/cover no-repeat;
+    background: url("../assets/hero/hero-house1.png") center right/cover no-repeat;
 }
 
 .hero-overlay {
@@ -3781,5 +3781,13 @@ body:before, body:after {
 @media (min-width: 769px) {
     .page-hero {
         padding-top: 70px !important;
+    }
+}
+
+@media (min-width: 769px) {
+    .footer-logo {
+        display: block !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
     }
 }
